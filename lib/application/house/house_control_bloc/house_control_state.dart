@@ -1,0 +1,53 @@
+part of 'house_control_bloc.dart';
+
+@freezed
+abstract class HouseControlState with _$HouseControlState {
+  const factory HouseControlState({
+    Map<String, dynamic> itemHouse,
+    int current,
+    int size,
+    String processId,
+    String choosingId,
+    String input,
+    String name,
+    String phone,
+    String price,
+    String remark,
+    String state,
+    Map<String, dynamic> userInfo,
+    List stateValues,
+    List houseUnitId,
+    // bool isHouseUnit,
+    // bool isHousList,
+    // bool isEntranceList,
+    List housList,
+    List entranceList,
+    bool isBottomSheet02,
+    bool isBottomSheet03,
+    bool isBottomSheet04,
+  }) = _HouseControlState;
+  factory HouseControlState.initial() => HouseControlState(
+        itemHouse: {},
+        current: 1,
+        size: 20,
+        choosingId: "",
+        processId: "",
+        input: "",
+        name: "",
+        phone: "",
+        price: "",
+        remark: "",
+        state: "1",
+        userInfo: {},
+        stateValues: [],
+        houseUnitId: [],
+        // isHouseUnit: false,
+        // isHousList: false,
+        // isEntranceList: false,
+        housList: [],
+        entranceList: [],
+        isBottomSheet02: false,
+        isBottomSheet03: false,
+        isBottomSheet04: false,
+      );
+}

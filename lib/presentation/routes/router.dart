@@ -1,0 +1,136 @@
+import 'package:auto_route/auto_route_annotations.dart';
+import 'package:flutter_ui/presentation/core/app_widget.dart';
+import 'package:flutter_ui/presentation/home/customer/customer_details_page.dart';
+import 'package:flutter_ui/presentation/home/customer/new_follow_up_page.dart';
+import 'package:flutter_ui/presentation/home/customer/perfect_information.dart';
+import 'package:flutter_ui/presentation/home/customer/process_house_page.dart';
+import 'package:flutter_ui/presentation/home/customer/upload_img_preview.dart';
+import 'package:flutter_ui/presentation/home/customer/upload_netimg_preview.dart';
+import 'package:flutter_ui/presentation/home/fitness_app_home_screen.dart';
+import 'package:flutter_ui/presentation/home/houseing/houseing_seles_control/houseing_seles_control_screen.dart';
+import 'package:flutter_ui/presentation/home/message/contacts_remarks.dart';
+import 'package:flutter_ui/presentation/home/message/follow_up.dart';
+import 'package:flutter_ui/presentation/home/message/message_chat.dart';
+import 'package:flutter_ui/presentation/home/message/message_page.dart';
+import 'package:flutter_ui/presentation/home/message/need_to_deal.dart';
+import 'package:flutter_ui/presentation/home/message/not_follow_up.dart';
+import 'package:flutter_ui/presentation/home/message/overdue_in_threedays.dart';
+import 'package:flutter_ui/presentation/home/message/process/manager_details.dart';
+import 'package:flutter_ui/presentation/home/message/process/salesman_details.dart';
+import 'package:flutter_ui/presentation/home/message/processed/processed_screen.dart';
+import 'package:flutter_ui/presentation/home/message/remind_details_view.dart';
+import 'package:flutter_ui/presentation/home/message/remind_list.dart';
+import 'package:flutter_ui/presentation/home/message/to_follow_today.dart';
+import 'package:flutter_ui/presentation/home/mine/about_us.dart';
+import 'package:flutter_ui/presentation/home/mine/about_us_introduce.dart';
+import 'package:flutter_ui/presentation/home/mine/ai_card.dart';
+import 'package:flutter_ui/presentation/home/mine/customer_chat.dart';
+import 'package:flutter_ui/presentation/home/mine/guest_phone.dart';
+import 'package:flutter_ui/presentation/home/mine/mine_achievement.dart';
+import 'package:flutter_ui/presentation/home/mine/mine_order.dart';
+import 'package:flutter_ui/presentation/home/mine/mine_setting_page.dart';
+import 'package:flutter_ui/presentation/home/mine/ownership_scheme_page.dart';
+import 'package:flutter_ui/presentation/home/mine/suggest_feedback.dart';
+import 'package:flutter_ui/presentation/home/mine/wechat_page.dart';
+import 'package:flutter_ui/presentation/login/login_page.dart';
+import 'package:flutter_ui/presentation/login/login_userInfo_page.dart';
+import 'package:flutter_ui/presentation/login/pin_code_page.dart';
+import 'package:flutter_ui/presentation/splash/autoenter_page.dart';
+import 'package:flutter_ui/presentation/splash/splash_page.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_comment.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_comment_details.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_house_details.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_house_info.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_maps.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_news.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_news_information.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_picture.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_picture_details.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_questions.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_questions_details.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_recomm_house.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_salesman.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_set_picture.dart';
+import 'package:flutter_ui/presentation/wechat/Housing/wechat_setcomment.dart';
+import 'package:flutter_ui/presentation/wechat/mine/wechat_add_information.dart';
+import 'package:flutter_ui/presentation/wechat/mine/wechat_fission_customer.dart';
+import 'package:flutter_ui/presentation/wechat/mine/wechat_follow_house.dart';
+import 'package:flutter_ui/presentation/wechat/mine/wechat_mine_comment.dart';
+import 'package:flutter_ui/presentation/wechat/mine/wechat_mine_customer.dart';
+import 'package:flutter_ui/presentation/wechat/mine/wechat_mine_picture.dart';
+import 'package:flutter_ui/presentation/wechat/mine/wechat_mine_questions.dart';
+import 'package:flutter_ui/presentation/wechat/recommend/wechat_recommend_page.dart';
+import 'package:flutter_ui/presentation/wechat/wechat_home_screen.dart';
+import 'package:flutter_ui/presentation/wechat/wechat_notice_page.dart';
+import 'package:flutter_ui/presentation/splash/platform_page.dart';
+
+@MaterialAutoRouter(
+  generateNavigationHelperExtension: true,
+  routes: <AutoRoute>[
+    MaterialRoute(page: Autoenter, initial: true),
+    MaterialRoute(page: PlatformPage),
+    MaterialRoute(page: SplashPage),
+    MaterialRoute(page: LoginScreen),
+    MaterialRoute(page: PinCodeVerificationScreen),
+    MaterialRoute(page: FitnessAppHomeScreen),
+    MaterialRoute(page: MessageChat),
+    MaterialRoute(page: ContactsRemarks),
+    MaterialRoute(page: SalesmanDetails),
+    MaterialRoute(page: ManagerDetails),
+    MaterialRoute(page: UploadImgPreview),
+    MaterialRoute(page: CustomerDetails),
+    MaterialRoute(page: NewFollowUp),
+    MaterialRoute(page: AiCard),
+    MaterialRoute(page: CustomerChat),
+    MaterialRoute(page: PerfectInformation),
+    MaterialRoute(page: SuggestFeedback),
+    MaterialRoute(page: GuestPhone),
+    MaterialRoute(page: MineOrder),
+    MaterialRoute(page: OwnershipSchemePage),
+    MaterialRoute(page: MineAchievement),
+    MaterialRoute(page: NotFollowUp),
+    MaterialRoute(page: OverdueInThreeDays),
+    MaterialRoute(page: ToFollowToday),
+    MaterialRoute(page: UploadNetImgPreview),
+    MaterialRoute(page: MineSettingPage),
+    MaterialRoute(page: RemindDetailsView),
+    MaterialRoute(page: HouseingSelesControlScreen),
+    MaterialRoute(page: ProcessedScreen),
+    MaterialRoute(page: NeedToDeal),
+    MaterialRoute(page: FollowUp),
+    MaterialRoute(page: RemindList),
+    MaterialRoute(page: MessagePage),
+    MaterialRoute(page: ProcessHousePage),
+    MaterialRoute(page: AppWidget),
+    MaterialRoute(page: LoginUserInfoPage),
+    MaterialRoute(page: AboutUs),
+    MaterialRoute(page: AboutUsIntroduce),
+    MaterialRoute(page: WechatPage),
+    MaterialRoute(page: WechatHouseDetails),
+    MaterialRoute(page: WechatNews),
+    MaterialRoute(page: WechatSetcomment),
+    MaterialRoute(page: WechatQuestionsDetails),
+    MaterialRoute(page: WechatHomeScreen),
+    MaterialRoute(page: WechatHouseInfo),
+    MaterialRoute(page: WechatRecommHouse),
+    MaterialRoute(page: WechatSalesman),
+    MaterialRoute(page: WechatComment),
+    MaterialRoute(page: WechatQuestions),
+    MaterialRoute(page: WechatPicture),
+    MaterialRoute(page: WechatSetPicture),
+    MaterialRoute(page: WechatCommentDetails),
+    MaterialRoute(page: WechatFollowHouse),
+    MaterialRoute(page: WechatMineComment),
+    MaterialRoute(page: WechatMineQuestions),
+    MaterialRoute(page: WechatMinePicture),
+    MaterialRoute(page: WechatMineCustomer),
+    MaterialRoute(page: WechatFissionCustomer),
+    MaterialRoute(page: WechatPictureDetails),
+    MaterialRoute(page: WechatNoticePage),
+    MaterialRoute(page: WechatNewsInformation),
+    MaterialRoute(page: WechatAddInformation),
+    MaterialRoute(page: WechatRecommendPage),
+    MaterialRoute(page: Maps),
+  ],
+)
+class $Router {}
